@@ -60,8 +60,8 @@ export default function CtaBanner() {
               Primeira pizza com 20% de desconto para novos clientes. Retire no local ou receba em casa. Nossa entrega é rápida e o sabor é garantido.
             </p>
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-              <a href="#cardápio" className="btn btn-gold">Pedir Agora</a>
-              <a href="#contato" className="btn btn-outline">Ver Promoções</a>
+              <a href="/" className="btn btn-gold">Aproveitar Agora</a>
+              <a href="/#cardápio" className="btn btn-outline">Ver Promoções</a>
             </div>
           </div>
 

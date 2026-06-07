@@ -109,34 +109,22 @@ export default function Footer() {
 
       {/* Bottom bar — pagio style */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-        <div className="container" style={{
+        <div className="container footer-bottom" style={{
           padding: '22px 24px',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr 1fr',
+          display: 'flex',
           alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '12px',
         }}>
           <div style={{
             fontFamily: 'var(--font-script)',
             fontSize: '18px', color: 'var(--white)',
           }}>pagio</div>
           <div style={{
-            textAlign: 'center',
             fontSize: '13px',
             color: 'rgba(255,255,255,0.3)',
           }}>
             © 2026 pagio. Todos os direitos reservados.
-          </div>
-          <div style={{
-            textAlign: 'right',
-            fontSize: '13px',
-            color: 'rgba(255,255,255,0.3)',
-            cursor: 'pointer',
-            transition: 'color 0.2s',
-          }}
-          onMouseEnter={e => e.target.style.color = 'var(--gold)'}
-          onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.3)'}
-          >
-            Área administrativa
           </div>
         </div>
       </div>
@@ -146,8 +134,8 @@ export default function Footer() {
           footer [style*="grid-template-columns: 1.5fr"] {
             grid-template-columns: 1fr 1fr !important;
           }
-          footer [style*="grid-template-columns: 1fr 1fr 1fr"] {
-            grid-template-columns: 1fr !important;
+          .footer-bottom {
+            flex-direction: column !important;
             text-align: center;
           }
         }

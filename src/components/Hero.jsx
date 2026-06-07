@@ -71,8 +71,8 @@ export default function Hero() {
           </p>
 
           <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-            <a href="#cardápio" className="btn btn-gold">Pedir Agora</a>
-            <a href="#sobre" className="btn btn-outline">Conheça Nossa História</a>
+            <a href="#cardápio" className="btn btn-gold">Ver Cardápio</a>
+            <a href="/" className="btn btn-outline">Fazer Pedido</a>
           </div>
 
           {/* Stats */}
@@ -104,23 +104,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div style={{
-        position: 'absolute', bottom: '32px', left: '50%',
-        transform: 'translateX(-50%)',
-        display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px',
-      }}>
-        <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Scroll</span>
-        <div style={{
-          width: '1px', height: '40px',
-          background: 'linear-gradient(to bottom, rgba(255,255,255,0.4), transparent)',
-          animation: 'pulse 2s infinite',
-        }} />
-      </div>
-
-      <style>{`
-        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-      `}</style>
     </section>
   );
 }

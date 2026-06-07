@@ -127,8 +127,8 @@ export default function WhyUs() {
               fontStyle: 'italic',
             }}>Comece hoje mesmo.</h3>
           </div>
-          <a href="#cardápio" className="btn btn-gold" style={{ position: 'relative', zIndex: 1, flexShrink: 0 }}>
-            Fazer Meu Pedido
+          <a href="#contato" className="btn btn-gold" style={{ position: 'relative', zIndex: 1, flexShrink: 0 }}>
+            Onde Pedir
           </a>
         </div>
       </div>

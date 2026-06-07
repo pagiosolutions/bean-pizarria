@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const pizzas = [
   {
@@ -129,12 +130,16 @@ export default function Menu() {
                       color: 'var(--red)',
                     }}>{p.price}</span>
                   </div>
-                  <button className="btn btn-red" style={{
-                    width: '100%', marginTop: '14px',
-                    padding: '11px', fontSize: '12px', justifyContent: 'center',
-                  }}>
+                  <Link
+                    to="/"
+                    className="btn btn-red"
+                    style={{
+                      width: '100%', marginTop: '14px',
+                      padding: '11px', fontSize: '12px', justifyContent: 'center',
+                    }}
+                  >
                     Pedir Agora
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -142,9 +147,9 @@ export default function Menu() {
         </div>
 
         <div className="reveal" style={{ textAlign: 'center', marginTop: '48px' }}>
-          <a href="#cardápio" className="btn btn-outline" style={{ color: 'var(--red)', border: '2px solid var(--red)' }}>
+          <Link to="/catalogo" className="btn btn-outline" style={{ color: 'var(--red)', border: '2px solid var(--red)' }}>
             Ver Cardápio Completo
-          </a>
+          </Link>
         </div>
       </div>
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,23 +21,28 @@ export default function Navbar() {
     }}>
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         {/* Logo */}
-        <a href="/" style={{
+        <Link to="/" style={{
           fontFamily: 'var(--font-script)',
           fontSize: '28px',
           color: 'var(--white)',
           letterSpacing: '0.02em',
         }}>
           Bean <span style={{ color: 'var(--gold)' }}>Pizzaria</span>
-        </a>
+        </Link>
 
         {/* Links desktop */}
         <ul style={{
           display: 'flex', alignItems: 'center', gap: '36px',
           listStyle: 'none',
         }} className="nav-links-desktop">
-          {['Home', 'Cardápio', 'Sobre Nós', 'Contato'].map(link => (
-            <li key={link}>
-              <a href={`#${link.toLowerCase().replace(' ', '')}`} style={{
+          {[
+            { label: 'Home', anchor: 'home' },
+            { label: 'Cardápio', anchor: 'cardápio' },
+            { label: 'Sobre Nós', anchor: 'sobre' },
+            { label: 'Contato', anchor: 'contato' },
+          ].map(({ label, anchor }) => (
+            <li key={label}>
+              <a href={`/#${anchor}`} style={{
                 fontFamily: 'var(--font-body)',
                 fontSize: '14px',
                 fontWeight: '700',
@@ -47,25 +53,16 @@ export default function Navbar() {
               }}
               onMouseEnter={e => e.target.style.color = 'var(--gold)'}
               onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.8)'}
-              >{link}</a>
+              >{label}</a>
             </li>
           ))}
         </ul>
 
         {/* CTA */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <button type="button" style={{
-            fontFamily: 'var(--font-body)', fontSize: '13px', fontWeight: '700',
-            color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase',
-            letterSpacing: '0.08em', transition: 'color 0.2s',
-            background: 'none', border: 'none', cursor: 'pointer', padding: 0,
-          }}
-          onMouseEnter={e => e.target.style.color = 'var(--gold)'}
-          onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.7)'}
-          >Entrar</button>
-          <a href="#cardápio" className="btn btn-gold" style={{ padding: '10px 22px', fontSize: '12px' }}>
+        <div>
+          <Link to="/" className="btn btn-gold" style={{ padding: '10px 22px', fontSize: '12px' }}>
             Pedir Agora
-          </a>
+          </Link>
         </div>
       </div>
 
