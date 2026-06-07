@@ -54,17 +54,18 @@ export default function Footer() {
             {/* Social */}
             <div style={{ display: 'flex', gap: '12px' }}>
               {['📘', '📸', '🎵', '🐦'].map((icon, i) => (
-                <a key={i} href="#" style={{
+                <button key={i} type="button" style={{
                   width: '36px', height: '36px',
                   borderRadius: '50%',
                   background: 'rgba(255,255,255,0.07)',
                   border: '1px solid rgba(255,255,255,0.1)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontSize: '14px', transition: 'all 0.2s',
+                  cursor: 'pointer', padding: 0,
                 }}
                 onMouseEnter={e => { e.currentTarget.style.background = 'var(--gold)'; e.currentTarget.style.borderColor = 'var(--gold)'; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; }}
-                >{icon}</a>
+                >{icon}</button>
               ))}
             </div>
           </div>
@@ -82,14 +83,15 @@ export default function Footer() {
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   {col.links.map(link => (
                     <li key={link}>
-                      <a href="#" style={{
+                      <button type="button" style={{
                         fontSize: '14px',
                         color: 'rgba(255,255,255,0.45)',
                         transition: 'color 0.2s',
+                        background: 'none', border: 'none', cursor: 'pointer', padding: 0,
                       }}
                       onMouseEnter={e => e.target.style.color = 'var(--gold)'}
                       onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.45)'}
-                      >{link}</a>
+                      >{link}</button>
                     </li>
                   ))}
                 </ul>

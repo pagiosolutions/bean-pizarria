@@ -23,7 +23,7 @@ export default function Discover() {
         }}>
           {/* Text */}
           <div className="reveal">
-            <span className="section-tag">// nossa história</span>
+            <span className="section-tag">{"// nossa história"}</span>
             <h2 className="section-title dark" style={{ fontStyle: 'italic' }}>
               Descubra a melhor<br />pizza da cidade
             </h2>

@@ -46,7 +46,7 @@ export default function Testimonials() {
     <section ref={ref} style={{ padding: '120px 0', background: 'var(--cream)' }}>
       <div className="container">
         <div className="reveal" style={{ textAlign: 'center', marginBottom: '64px' }}>
-          <span className="section-tag">// depoimentos</span>
+          <span className="section-tag">{"// depoimentos"}</span>
           <h2 className="section-title dark" style={{ fontStyle: 'italic' }}>
             Nosso feedback de perfeição
           </h2>

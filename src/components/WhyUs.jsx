@@ -23,7 +23,7 @@ export default function WhyUs() {
     <section ref={ref} style={{ padding: '120px 0', background: 'var(--cream)' }}>
       <div className="container">
         <div className="reveal" style={{ textAlign: 'center', marginBottom: '64px' }}>
-          <span className="section-tag">// por que nós?</span>
+          <span className="section-tag">{"// por que nós?"}</span>
           <h2 className="section-title dark" style={{ fontStyle: 'italic' }}>
             Por que somos diferentes?
           </h2>

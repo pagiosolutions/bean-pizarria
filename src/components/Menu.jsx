@@ -52,7 +52,7 @@ export default function Menu() {
       <div className="container">
         {/* Header */}
         <div className="reveal" style={{ textAlign: 'center', marginBottom: '72px' }}>
-          <span className="section-tag">// cardápio</span>
+          <span className="section-tag">{"// cardápio"}</span>
           <h2 className="section-title dark" style={{ fontStyle: 'italic' }}>
             Um novo sabor a cada pedido
           </h2>
@@ -142,7 +142,7 @@ export default function Menu() {
         </div>
 
         <div className="reveal" style={{ textAlign: 'center', marginTop: '48px' }}>
-          <a href="#" className="btn btn-outline" style={{ color: 'var(--red)', border: '2px solid var(--red)' }}>
+          <a href="#cardápio" className="btn btn-outline" style={{ color: 'var(--red)', border: '2px solid var(--red)' }}>
             Ver Cardápio Completo
           </a>
         </div>

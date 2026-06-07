@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -21,7 +20,7 @@ export default function Navbar() {
     }}>
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         {/* Logo */}
-        <a href="#" style={{
+        <a href="/" style={{
           fontFamily: 'var(--font-script)',
           fontSize: '28px',
           color: 'var(--white)',
@@ -55,14 +54,15 @@ export default function Navbar() {
 
         {/* CTA */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <a href="#" style={{
+          <button type="button" style={{
             fontFamily: 'var(--font-body)', fontSize: '13px', fontWeight: '700',
             color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase',
             letterSpacing: '0.08em', transition: 'color 0.2s',
+            background: 'none', border: 'none', cursor: 'pointer', padding: 0,
           }}
           onMouseEnter={e => e.target.style.color = 'var(--gold)'}
           onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.7)'}
-          >Entrar</a>
+          >Entrar</button>
           <a href="#cardápio" className="btn btn-gold" style={{ padding: '10px 22px', fontSize: '12px' }}>
             Pedir Agora
           </a>
