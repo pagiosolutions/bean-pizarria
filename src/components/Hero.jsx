@@ -72,7 +72,7 @@ export default function Hero() {
 
           <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
             <a href="#cardápio" className="btn btn-gold">Ver Cardápio</a>
-            <a href="/" className="btn btn-outline">Fazer Pedido</a>
+            <a href="#sobre" className="btn btn-outline">Conheça Nossa História</a>
           </div>
 
           {/* Stats */}
